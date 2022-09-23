@@ -1,7 +1,5 @@
 provider "aws" {
-  region                  = "us-east-1"
-  shared_credentials_file = "/users/prashanthpalamand/.aws/credentials"
-  profile                 = "pp_terraform_course"
+  region = "us-east-1"
 }
 
 module "sg_module" {
