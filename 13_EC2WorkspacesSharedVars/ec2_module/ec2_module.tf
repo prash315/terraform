@@ -1,5 +1,5 @@
 variable "amiid" {
-  default = "ami-05fa00d4c63e32376"
+  default = ""
 }
 
 module "shared_vars" {
@@ -9,7 +9,7 @@ module "shared_vars" {
 #variable "sg_id" {} 
 
 variable "sg_id" {
-  default = "sg-0be1f5e01c70dfecf"
+  default = ""
 } 
 
 /*
