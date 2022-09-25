@@ -26,6 +26,6 @@ resource "aws_security_group" "sg_module_creation" {
   }
 }
 
-output "sg_id_output" {
+output "sg_output" {
   value = "${aws_security_group.sg_module_creation.id}"
 }
