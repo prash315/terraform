@@ -7,7 +7,7 @@ module "sg_module" {
 }
 
 module "ec2_module_1" {
-  sg_id = "${module.sg_module.sg_id_output}"
+  sg_id = "${module.sg_module.sg_output}"
   source = "./ec2_module"
 }
 
