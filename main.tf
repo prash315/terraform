@@ -10,17 +10,6 @@ module "ec2_module_1" {
   source = "./ec2_module"
 }
 
-locals {
-  env = "${terraform.workspace}"
-
-  amiid_env = {
-    "default" = "amiid_default"
-    "staging" = "amiid_staging"
-    "production" = "amiid_production"
-  }
-  amiid = "${lookup(local.amiid_env, local.env)}"
-}
-
 output "envSpecificOutputVariable" {
-  value = "${local.amiid}"
+  value = "New Instance"
 }
