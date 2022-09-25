@@ -1,7 +1,3 @@
-variable "vpc_id" {
-  type = string
-}
-
 module "shared_vars" {
   source = "../shared_vars"
 }
@@ -9,7 +5,7 @@ module "shared_vars" {
 resource "aws_security_group" "sg_module_creation" {
   name        = "sg_ec2_${module.shared_vars.env_suffix}"
   description = "Terraform course security group for EC2 instance"
-  vpc_id      = "${var.vpcid}"
+  vpc_id      = var.vpc_id
 
   ingress {
     # TLS (change to whatever ports you need)
