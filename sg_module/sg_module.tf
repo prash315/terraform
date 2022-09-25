@@ -1,10 +1,6 @@
-module "shared_vars" {
-  source = "../shared_vars"
-}
-
 resource "aws_security_group" "sg_module_creation" {
-  name        = "sg_ec2_${module.shared_vars.env_suffix}"
-  description = "Terraform course security group for EC2 instance"
+  name        = "tf security group"
+  description = "Terraform security group for EC2 instance"
   vpc_id      = var.vpc_id
 
   ingress {
