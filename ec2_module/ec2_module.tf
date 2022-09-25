@@ -1,10 +1,14 @@
-variable "amiid" {}
+variable "amiid" {
+  type = string
+}
 
 module "shared_vars" {
   source = "../shared_vars"
 }
 
-variable "sg_id" {}
+variable "sg_id" {
+  type = string
+}
 
 resource "aws_instance" "terraform_ec2_instance" {
   ami           = "${var.amiid}"

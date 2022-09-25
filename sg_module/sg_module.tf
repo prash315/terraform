@@ -1,4 +1,6 @@
-variable "vpcid" {}
+variable "vpcid" {
+  type = string
+}
 
 module "shared_vars" {
   source = "../shared_vars"
