@@ -2,6 +2,9 @@ module "shared_vars" {
   source = "../shared_vars"
 }
 
+module "sg_module" {
+  source = "../sg_module"
+}
 resource "aws_instance" "terraform_ec2_instance" {
   ami           = var.ami_id
   instance_type = "t2.micro"
