@@ -6,8 +6,15 @@ provider "aws" {
   }
 }
 
-variable "ami_id" {}
-variable "vpc_id" {}
+variable "ami_id" {
+  type = string
+  default = var.ami_id
+}
+
+variable "vpc_id" {
+  type = string
+  default = var.vpc_id
+}
 
 module "sg_module" {
   source = "./sg_module"
