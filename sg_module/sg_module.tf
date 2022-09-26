@@ -6,7 +6,7 @@ resource "aws_security_group" "sg_module_creation" {
   ingress {
     # TLS (change to whatever ports you need)
     from_port   = 22 # this is to open the ssh access usually in port 22
-    to_port     = 22 # this is to open the ssh access usually in port 22
+    to_port     = 23 # this is to open the ssh access usually in port 22
     protocol    = "tcp"
     # Please restrict your ingress to only necessary IPs and ports.
     # Opening to 0.0.0.0/0 can lead to security vulnerabilities.
@@ -15,7 +15,7 @@ resource "aws_security_group" "sg_module_creation" {
 
   egress {
     from_port       = 22 # this is to open the ssh access usually in port 22
-    to_port         = 22 # this is to open the ssh access usually in port 22
+    to_port         = 23 # this is to open the ssh access usually in port 22
     protocol        = "tcp"
     cidr_blocks     = ["0.0.0.0/0"]
     # prefix_list_ids = ["pl-12c4e678"]
