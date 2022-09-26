@@ -8,12 +8,10 @@ provider "aws" {
 
 variable "ami_id" {
   type = string
-  default = ""
 }
 
 variable "vpc_id" {
   type = string
-  default = ""
 }
 
 module "sg_module" {
