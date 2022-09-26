@@ -6,14 +6,6 @@ provider "aws" {
   }
 }
 
-variable "ami_id" {
-  type = string
-}
-
-variable "vpc_id" {
-  type = string
-}
-
 module "sg_module" {
   source = "./sg_module"
 }
