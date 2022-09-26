@@ -6,8 +6,8 @@ provider "aws" {
   }
 }
 
-variable "ami_id" = {}
-variable "vpc_id" = {}
+variable "ami_id" {}
+variable "vpc_id" {}
 
 module "sg_module" {
   source = "./sg_module"
